@@ -7,7 +7,8 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		
+		<title>Concours Photo ESGI</title>
+		<meta name="description" content="Concours Photo" />
 		
 		
 		<body>
