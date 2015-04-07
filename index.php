@@ -3,20 +3,25 @@
     ini_set("display_error",1);
 
     session_start();
+
 	require "facebook-php-sdk-v4-4.0-dev/autoload.php";
 	use Facebook\FacebookSession;
 	use Facebook\FacebookRedirectLoginHelper;
+    use Facebook\FacebookRequest;
+    use Facebook\GraphUser;
 	
 	const APPID = "1431531240480284";
 	const APPSECRET = "08611dedf4fdc28a5a02f465a14f6aec";
     const WEBURL = "https://projetesgifb.herokuapp.com/";
 
 	FacebookSession::setDefaultApplication(APPID, APPSECRET);
+
 	$helper = new FacebookRedirectLoginHelper(WEBURL);
 
 	//$loginUrl = $helper->getLoginUrl();
 
     //$session = $helper->getSessionFromRedirect();
+
     if( isset($_SESSION) && isset($_SESSION['fb_token']) ){
         $session = new FacebookSession($_SESSION['fb_token']);
     } else {
@@ -37,6 +42,13 @@
         <?php
         if($session){
             $_SESSION['fb_token'] = (string) $session->getAccessToken();
+
+            $request_user = new FacebookRequest( $session,"GET","/me");
+            $request_user_executed = $request_user->execute();
+            $user = $request_user_executed->getGraphObject(GraphUser::className());
+
+            echo "Bonjour ".$user->getName();
+
         } else {
             $loginUrl = $helper->getLoginUrl();
             echo "<a href='".$loginUrl."'>Facebook Login</a>";
@@ -61,7 +73,7 @@
 		   }(document, 'script', 'facebook-jssdk'));
 		</script>	
 		
-		<h1>Hello World</h1>
+		<h1>Mon Concours Photo</h1>
 		
 		<div
 		  class="fb-like"
