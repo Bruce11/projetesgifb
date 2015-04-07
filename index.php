@@ -1,21 +1,28 @@
 <?php
+
+	require "facebook-php-sdk-v4-4.0-dev/autoload.php"
+
+	use Facebook\FacebookSession;
+	
 	const APPID = "1431531240480284";
 	const APPSECRET = "08611dedf4fdc28a5a02f465a14f6aec";
+	
+	FacebookSession::setDefaultApplication(APPID, APPSECRET);
 ?>
 
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
+		<meta charset="UTF-8">
 		<title>Concours Photo ESGI</title>
-		<meta name="description" content="contenu de ma page" />
+		<meta name="description" content="contenu de ma page">
 	</head>	
 		
 	<body>
 		<script>
 		  window.fbAsyncInit = function() {
 			FB.init({
-			  appId      : '1431531240480284',
+			  appId      : '<?php echo APPID; ?>',
 			  xfbml      : true,
 			  version    : 'v2.3'
 			});
