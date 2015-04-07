@@ -28,10 +28,10 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.041769043" vertical-offset="0" max-vertical-offset="1360">
-              <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.522113" vertical-offset="0" max-vertical-offset="1360">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding>
-                <element signature="e#143#172#0#PHP" expanded="true" />
+                <element signature="e#142#171#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -205,10 +205,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.041769043" vertical-offset="0" max-vertical-offset="1360">
-          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.522113" vertical-offset="0" max-vertical-offset="1360">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
-            <element signature="e#143#172#0#PHP" expanded="true" />
+            <element signature="e#142#171#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
